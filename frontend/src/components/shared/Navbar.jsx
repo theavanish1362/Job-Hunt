@@ -32,6 +32,14 @@ const Navbar = () => {
   return (
     <header className="bg-[#f9f9ff] border-b border-gray-200 shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
+
+       <div className='flex flex-row gap-4 items-center'>
+         <Avatar className="h-12 w-12 ring-2 ring-slate-700">
+                      <AvatarImage
+                        src=".\Jh-c.svg"
+                        alt="Logo"
+                      />
+                    </Avatar>
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-gray-800">
           Job<span className="bg-gradient-to-r from-red-500 to-orange-300 bg-clip-text text-transparent">
@@ -39,6 +47,7 @@ const Navbar = () => {
 </span>
 
         </Link>
+       </div>
 
         {/* Navigation Links */}
         <nav className="flex items-center gap-12">
@@ -66,7 +75,7 @@ const Navbar = () => {
                 </Button>
               </Link>
               <Link to="/signup">
-                <Button className="bg-[#d76b53] hover:bg-[#c8573d] text-white">
+                <Button className="bg-[#d76b53] hover:bg-[#d76b53] text-white">
                   Sign Up
                 </Button>
               </Link>
@@ -74,7 +83,7 @@ const Navbar = () => {
           ) : (
             <Popover>
               <PopoverTrigger asChild>
-                <Avatar className="cursor-pointer ring-2 ring-[#d79753]">
+                <Avatar className="cursor-pointer ring-2 ring-slate-600">
                   <AvatarImage src={user?.profile?.profilePhoto} alt="User" />
                 </Avatar>
               </PopoverTrigger>

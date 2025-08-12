@@ -68,7 +68,7 @@ const Login = () => {
   </span>
 
   <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 animate-fade-up">
-    Job <span className="text-[#6A38C2]">Hunt</span>
+    Job <span className="bg-gradient-to-r from-red-500 to-orange-300 bg-clip-text text-transparent">Hunt</span>
   </h1>
 
   <p
@@ -149,14 +149,14 @@ const Login = () => {
               Please wait
             </Button>
           ) : (
-            <Button type="submit" className="w-full bg-[#6A38C2] hover:bg-[#5b30a6] text-white my-2">
+            <Button type="submit" className="w-full bg-gradient-to-r from-red-500 to-orange-500  text-white my-2">
               Login
             </Button>
           )}
 
           <p className="text-sm text-center text-gray-600">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-[#6A38C2] hover:underline">
+            <Link to="/signup" className="text-[#F83002] hover:underline">
               Sign Up
             </Link>
           </p>

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Search } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { setSearchedQuery } from "@/redux/jobSlice";
 import { useNavigate } from "react-router-dom";
 import CategoryCarousel from "./CategoryCarousel";
+
 
 const HeroSection = () => {
   const [query, setQuery] = useState("");
@@ -16,15 +17,37 @@ const HeroSection = () => {
     navigate("/browse");
   };
 
+//   const letterVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: (i) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: i * 0.05,
+//       duration: 0.5,
+//       ease: "easeOut",
+//     },
+//   }),
+// };
+
+// const textVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.6, ease: "easeOut", delay: 1 },
+//   },
+// };
+
+
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-[#f9f9ff] rounded-3xl shadow-md">
+    <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-[#f9f9ff]  shadow-md">
       <div className="w-full md:w-1/2 text-left space-y-6">
         <span className="inline-block px-4 py-2 bg-[#eee5ff] text-[#d76b53] text-sm font-semibold rounded-full shadow-sm">
           Kickstart Your Future Today
         </span>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-blue-950 to-violet-600 bg-clip-text text-transparent animate-fade-up">
-          Search, Apply & <br />
-          Get Your <span className="bg-gradient-to-r from-red-500 to-orange-300 bg-clip-text text-transparent">Dream Jobs</span>
+          Find the Right Role & <br /> Step Into Your <br /><span className='bg-gradient-to-r from-red-500 to-orange-300 bg-clip-text text-transparent'>Dream Job</span>
         </h1>
 
         <p

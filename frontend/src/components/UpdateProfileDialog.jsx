@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from './ui/dialog'
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogClose } from './ui/dialog'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
@@ -70,7 +70,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
 
     return (
         <div>
-            <Dialog open={open}>
+            <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className="sm:max-w-[425px]" onInteractOutside={() => setOpen(false)}>
                     <DialogHeader>
                         <DialogTitle>Update Profile</DialogTitle>
