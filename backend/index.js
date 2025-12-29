@@ -16,13 +16,37 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
-    //origin:'http://localhost:5173',
-    origin:'https://job-hunt-frontend-v99u.onrender.com',
-    credentials:true
-}
+// const corsOptions = {
+//     origin:'http://localhost:5173',
+//     credentials:true
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+/* -------------------- CORS CONFIG -------------------- */
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://job-hunt-frontend-v99u.onrender.com"
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (Postman, mobile apps)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
+// Handle preflight requests
+app.options("*", cors());
 
 const PORT = process.env.PORT || 3000;
 
