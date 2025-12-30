@@ -83,7 +83,7 @@ const Login = () => {
     <img
       src="https://i.postimg.cc/TwzmW9WJ/j-hunt.png"
       alt="Job Hunt Illustration"
-      className="w-screen max-w-md mx-auto md:mx-0 rounded-xl shadow-md object-contain"
+      className="w-full max-w-md mx-auto md:mx-0 rounded-xl shadow-md object-contain"
     />
   </div>
 </div>
