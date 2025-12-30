@@ -36,7 +36,7 @@ const Navbar = () => {
        <div className='flex flex-row gap-4 items-center'>
          <Avatar className="h-12 w-12 ring-2 ring-slate-700">
                       <AvatarImage
-                        src=".\Jh-c.svg"
+                        src="/Jh-c.svg"
                         alt="Logo"
                       />
                     </Avatar>
