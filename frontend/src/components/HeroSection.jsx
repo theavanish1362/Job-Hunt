@@ -42,7 +42,7 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-[#f9f9ff]  shadow-md">
-      <div className="w-full md:w-1/2 text-left space-y-6">
+      <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
         <span className="inline-block px-4 py-2 bg-[#eee5ff] text-[#d76b53] text-sm font-semibold rounded-full shadow-sm">
           Kickstart Your Future Today
         </span>
@@ -57,7 +57,7 @@ const HeroSection = () => {
           Connecting The Best Employees With The Best Companies...
         </p>
 
-        <div className="flex w-5/6 max-w-xl shadow-lg border border-gray-200 rounded-full overflow-hidden">
+        <div className="flex w-full md:w-5/6 max-w-xl shadow-lg border border-gray-200 rounded-full overflow-hidden">
           <input
             type="text"
             placeholder="Find your dream jobs"
